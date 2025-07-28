@@ -53,6 +53,17 @@ import '../../feature/rule_of_dantadhavana/view/rule_of_dantadhava.dart';
 import '../constants/app_strings/local_storage_key_strings.dart';
 import '../../Features/varsha/view/varsha.dart';
 import '../../Features/vasant/view/vasant.dart';
+import '../../feature/Prataruthana_screen/view/benefits_wakeup_early_screen.dart';
+import '../../feature/Prataruthana_screen/view/how_to_wakeup_early_screen.dart';
+import '../../feature/Vyayamascreen/view/benefits_vyayama_screen.dart';
+import '../../feature/Vyayamascreen/view/guidelines_vyayama_screen.dart';
+import '../../feature/Abhyanga/view/abhyanga_screen.dart';
+import '../../feature/Abhyanga/view/benefits_abhyanga_screen.dart';
+import '../../feature/Abhyanga/view/recommended_oils_abhyanga_screen.dart';
+import '../../feature/Udavartanascreen/view/benefits_udavartana_screen.dart';
+import '../../feature/Udavartanascreen/view/guidelines_udavartana_screen.dart';
+import '../../feature/BathSnana/view/bath_snana_screen.dart';
+import '../../feature/BathSnana/view/benefits_bath_snana_screen.dart';
 
 class AppRouter {
   static const String defaultLocation = "/";
@@ -178,6 +189,28 @@ class AppRouter {
   static const String varsha = "/varsha";
 
   static const String vasant = "/vasant";
+
+  static const String benefitsWakeupEarly = "/benefits_wakeup_early";
+
+  static const String howToWakeupEarly = "/how_to_wakeup_early";
+
+  static const String benefitsVyayama = "/benefits_vyayama";
+
+  static const String guidelinesVyayama = "/guidelines_vyayama";
+
+  static const String abhyanga = "/abhyanga";
+
+  static const String benefitsAbhyanga = "/benefits_abhyanga";
+
+  static const String recommendedOilsAbhyanga = "/recommended_oils_abhyanga";
+
+  static const String benefitsUdavartana = "/benefits_udavartana";
+
+  static const String guidelinesUdavartana = "/guidelines_udavartana";
+
+  static const String bathSnana = "/bath_snana";
+
+  static const String benefitsBathSnana = "/benefits_bath_snana";
 
   // Define routes
   static final GoRouter router = GoRouter(
@@ -370,6 +403,16 @@ class AppRouter {
             return hcCustomTransitionPage(Healthydietplansscreen());
           }),
       GoRoute(
+          path: benefitsWakeupEarly,
+          pageBuilder: (BuildContext context, GoRouterState state) {
+            return hcCustomTransitionPage(const BenefitsWakeupEarlyScreen());
+          }),
+      GoRoute(
+          path: howToWakeupEarly,
+          pageBuilder: (BuildContext context, GoRouterState state) {
+            return hcCustomTransitionPage(const HowToWakeupEarlyScreen());
+          }),
+      GoRoute(
           path: pathyaAcco,
           pageBuilder: (BuildContext context, GoRouterState state) {
             return hcCustomTransitionPage(const PathyaaccordingScreen());
@@ -435,8 +478,59 @@ class AppRouter {
           pageBuilder: (BuildContext context, GoRouterState state) {
             return hcCustomTransitionPage(const Vasant());
           }),
+      GoRoute(
+          path: benefitsVyayama,
+          pageBuilder: (BuildContext context, GoRouterState state) {
+            return hcCustomTransitionPage(const BenefitsVyayamaScreen());
+          }),
+      GoRoute(
+          path: guidelinesVyayama,
+          pageBuilder: (BuildContext context, GoRouterState state) {
+            return hcCustomTransitionPage(const GuidelinesVyayamaScreen());
+          }),
+      GoRoute(
+          path: abhyanga,
+          pageBuilder: (BuildContext context, GoRouterState state) {
+            return hcCustomTransitionPage(const AbhyangaScreen());
+          }),
+      GoRoute(
+          path: benefitsAbhyanga,
+          pageBuilder: (BuildContext context, GoRouterState state) {
+            return hcCustomTransitionPage(const BenefitsAbhyangaScreen());
+          }),
+      GoRoute(
+          path: recommendedOilsAbhyanga,
+          pageBuilder: (BuildContext context, GoRouterState state) {
+            return hcCustomTransitionPage(const RecommendedOilsAbhyangaScreen());
+          }),
+      GoRoute(
+          path: benefitsUdavartana,
+          pageBuilder: (BuildContext context, GoRouterState state) {
+            return hcCustomTransitionPage(const BenefitsUdavartanaScreen());
+          }),
+      GoRoute(
+          path: guidelinesUdavartana,
+          pageBuilder: (BuildContext context, GoRouterState state) {
+            return hcCustomTransitionPage(const GuidelinesUdavartanaScreen());
+          }),
+      GoRoute(
+          path: bathSnana,
+          pageBuilder: (BuildContext context, GoRouterState state) {
+            return hcCustomTransitionPage(const BathSnanaScreen());
+          }),
+      GoRoute(
+          path: benefitsBathSnana,
+          pageBuilder: (BuildContext context, GoRouterState state) {
+            return hcCustomTransitionPage(const BenefitsBathSnanaScreen());
+          }),
     ],
   );
+
+  // static String ayurvedaMain;
+
+  // static String benefitsOfBathing;
+
+  // static String guidelinesForBathing;
 }
 
 CustomTransitionPage<dynamic> hcCustomTransitionPage(Widget widget) {

@@ -3,6 +3,8 @@ import 'package:donation_management/utils/constants/app_colors.dart';
 import 'package:donation_management/utils/extension/sized_box_extension.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:go_router/go_router.dart';
+import '../../../utils/navigation/route_manager.dart';
 
 import '../../../utils/constants/app_images.dart';
 import '../../../utils/constants/app_strings/app_strings.dart';
@@ -49,10 +51,19 @@ class UdavartanaCustomWidget extends StatelessWidget {
               ),
             ),
            30.height,
-           const DantdhawanContainercustomWidget(title: "Benefits of Udavartana"),
+           InkWell(
+            onTap: () {
+              context.push(AppRouter.benefitsUdavartana);
+            },
+            child: const DantdhawanContainercustomWidget(title: "Benefits of Udavartana"),
+          ),
             8.height,
-           const DantdhawanContainercustomWidget(title:"Guidelines for Udavartana",
-            ),
+           InkWell(
+             onTap: () {
+               context.push(AppRouter.guidelinesUdavartana);
+             },
+             child: const DantdhawanContainercustomWidget(title:"Guidelines for Udavartana"),
+           ),
           ],
         ),
       );

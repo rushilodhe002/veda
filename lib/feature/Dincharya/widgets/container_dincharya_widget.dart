@@ -8,6 +8,7 @@ import 'package:donation_management/utils/extension/sized_box_extension.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:go_router/go_router.dart';
+import '../../../utils/navigation/route_manager.dart';
 import '../../../utils/constants/app_strings/app_strings.dart';
 import '../../../utils/themes/app_text_style.dart';
 import 'container_contsom_widget.dart';
@@ -105,7 +106,7 @@ class DincharyaScreen extends StatelessWidget {
                   25.width,
                   InkWell(
                          onTap: (){
-                  // Navigator.push(context, MaterialPageRoute(builder: (context)=>()));
+                           context.push(AppRouter.bathSnana);
                  },
                     child: CustomContainer(
                       child: SvgPicture.asset(AppImages.bathIcon),

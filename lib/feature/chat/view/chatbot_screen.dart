@@ -14,9 +14,9 @@ class _ChatBotScreenState extends State<ChatBotScreen> {
   final ScrollController _scrollController = ScrollController();
   final List<ChatMessage> _messages = [];
   bool _isLoading = false;
-  static const apiKey = 'AIzaSyD_idmFqYbrkldOObWJK3EYc7zTK-XWHaI';
+  static const apiKey = 'AIzaSyDyTPYNKSeNlAWZNBgz1q8dlwA1H5CtvTY';
   late final model = GenerativeModel(
-    model: 'gemini-pro',
+    model: 'gemini-2.0-flash',
     apiKey: apiKey,
   );
   late final chat = model.startChat();

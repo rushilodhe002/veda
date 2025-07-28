@@ -54,12 +54,12 @@ class PrataruthanaCustomWidget extends StatelessWidget {
            30.height,
            InkWell(
             onTap: (){
-              context.push(AppRouter.apathya);
+              context.push(AppRouter.benefitsWakeupEarly);
               },
             child: const DantdhawanContainercustomWidget(title: AppStrings.wakeupearlytext)),
             8.height,
           InkWell (onTap: (){
-              context.push(AppRouter.prataruthana);
+              context.push(AppRouter.howToWakeupEarly);
               },
              child: const DantdhawanContainercustomWidget(title: AppStrings.wakeuptext,
               ),

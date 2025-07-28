@@ -7,6 +7,8 @@ import 'package:flutter_svg/svg.dart';
 import '../../../utils/constants/app_images.dart';
 import '../../../utils/constants/app_strings/app_strings.dart';
 import '../../../utils/themes/app_text_style.dart';
+import '../../../utils/navigation/route_manager.dart';
+import 'package:go_router/go_router.dart';
 
 
 class VyayamaCustomWidget extends StatelessWidget {
@@ -49,10 +51,19 @@ class VyayamaCustomWidget extends StatelessWidget {
               ),
             ),
            30.height,
-           const DantdhawanContainercustomWidget(title:"Benefits of Vyayama (Exercise"),
+           InkWell(
+            onTap: () {
+              context.push(AppRouter.benefitsVyayama);
+            },
+            child: const DantdhawanContainercustomWidget(title:"Benefits of Vyayama (Exercise"),
+          ),
             8.height,
-           const DantdhawanContainercustomWidget(title:"Guidelines for Vyayama \n (As per Ayurveda)",
-            ),
+           InkWell(
+             onTap: () {
+               context.push(AppRouter.guidelinesVyayama);
+             },
+             child: const DantdhawanContainercustomWidget(title:"Guidelines for Vyayama \n (As per Ayurveda)"),
+           ),
           ],
         ),
       );
