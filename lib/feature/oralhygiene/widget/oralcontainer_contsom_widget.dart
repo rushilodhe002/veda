@@ -1,8 +1,11 @@
 import 'package:donation_management/feature/Dantdhawan/view/dantdhawan_home_screen.dart';
 import 'package:donation_management/feature/jivha_nirlekhana/view/jivamain.dart';
+import 'package:donation_management/feature/gandusha/view/gandusha_screen.dart';
 import 'package:donation_management/utils/extension/sized_box_extension.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:go_router/go_router.dart';
+import '../../../utils/navigation/route_manager.dart';
 
 import '../../../utils/constants/app_images.dart';
 import '../../../utils/constants/app_strings/app_strings.dart';
@@ -62,7 +65,7 @@ class OralHygieneScreen extends StatelessWidget {
               children: [
                 InkWell(
                    onTap: (){
-                  Navigator.push(context, MaterialPageRoute(builder: (context)=>Jivamain()));
+                  context.push(AppRouter.gandusha);
                  },
                   child: OralCustomContainer(
                     title: AppStrings.gandushtext,

@@ -5,6 +5,7 @@ import 'package:donation_management/utils/extension/sized_box_extension.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:go_router/go_router.dart';
+import '../../../utils/navigation/route_manager.dart';
 
 import '../../../utils/constants/app_images.dart';
 import '../../../utils/constants/app_strings/app_strings.dart';
@@ -57,11 +58,21 @@ class DantdhawanCustomWidget extends StatelessWidget {
             ),
           ),
           30.height,
-          const DantdhawanContainercustomWidget(
-              title: AppStrings.methodapplicationtext),
+          InkWell(
+            onTap: () {
+              context.push(AppRouter.method);
+            },
+            child: const DantdhawanContainercustomWidget(
+                title: AppStrings.methodapplicationtext),
+          ),
           8.height,
-          const DantdhawanContainercustomWidget(
-            title: AppStrings.rulefortext,
+          InkWell(
+            onTap: () {
+              context.push(AppRouter.ruleofdantadhava);
+            },
+            child: const DantdhawanContainercustomWidget(
+              title: AppStrings.rulefortext,
+            ),
           ),
         ],
       ),

@@ -1,9 +1,9 @@
-import 'package:donation_management/feature/Ayurveda_screen/widget/ayurveda_containercustom_widget.dart';
 import 'package:donation_management/utils/constants/app_colors.dart';
 import 'package:donation_management/utils/extension/sized_box_extension.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:go_router/go_router.dart';
+import '../../../utils/navigation/route_manager.dart';
 
 import '../../../utils/constants/app_images.dart';
 import '../../../utils/themes/app_text_style.dart';
@@ -54,10 +54,51 @@ class JivaCustomWidget extends StatelessWidget {
               ),
             ),
            30.height,
-           const AyurvedaContainercustomWidget(title:"Benefits of Jivha Nirlekhana"),
+           InkWell(
+             onTap: () {
+               context.push(AppRouter.jivhaBenefits);
+             },
+             child: Container(
+               padding: EdgeInsets.all(12),
+               decoration: BoxDecoration(
+                 color: AppColors.buttonColor,
+                 borderRadius: BorderRadius.circular(8),
+               ),
+               child: Row(
+                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                 children: [
+                   Text(
+                     "Benefits of Jivha Nirlekhana",
+                     style: const TextStyle(fontSize: 16, color: AppColors.white, fontWeight: FontWeight.bold),
+                   ),
+                   const Icon(Icons.arrow_forward_ios, color: AppColors.white, size: 16),
+                 ],
+               ),
+             ),
+           ),
             8.height,
-           const AyurvedaContainercustomWidget(title:"Material of Tongue Scrapers",
-            ),
+           InkWell(
+             onTap: () {
+               context.push(AppRouter.jivhaMaterials);
+             },
+             child: Container(
+               padding: EdgeInsets.all(12),
+               decoration: BoxDecoration(
+                 color: AppColors.buttonColor,
+                 borderRadius: BorderRadius.circular(8),
+               ),
+               child: Row(
+                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                 children: [
+                   Text(
+                     "Material of Tongue Scrapers",
+                     style: const TextStyle(fontSize: 16, color: AppColors.white, fontWeight: FontWeight.bold),
+                   ),
+                   const Icon(Icons.arrow_forward_ios, color: AppColors.white, size: 16),
+                 ],
+               ),
+             ),
+           ),
           ],
         ),
       );

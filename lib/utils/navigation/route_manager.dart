@@ -64,6 +64,12 @@ import '../../feature/Udavartanascreen/view/benefits_udavartana_screen.dart';
 import '../../feature/Udavartanascreen/view/guidelines_udavartana_screen.dart';
 import '../../feature/BathSnana/view/bath_snana_screen.dart';
 import '../../feature/BathSnana/view/benefits_bath_snana_screen.dart';
+import '../../feature/method_of _application/view/method_home.dart';
+import '../../feature/jivha_nirlekhana/view/benefits_screen.dart';
+import '../../feature/jivha_nirlekhana/view/materials_screen.dart';
+import '../../feature/gandusha/view/gandusha_screen.dart';
+import '../../feature/gandusha/view/benefits_screen.dart';
+import '../../feature/gandusha/view/liquids_screen.dart';
 
 class AppRouter {
   static const String defaultLocation = "/";
@@ -212,6 +218,15 @@ class AppRouter {
 
   static const String benefitsBathSnana = "/benefits_bath_snana";
 
+  /// jivha nirlekhana
+  static const String jivhaBenefits = "/jivha_benefits";
+  static const String jivhaMaterials = "/jivha_materials";
+
+  /// gandusha
+  static const String gandusha = "/gandusha";
+  static const String gandushaBenefits = "/gandusha_benefits";
+  static const String gandushaLiquids = "/gandusha_liquids";
+
   // Define routes
   static final GoRouter router = GoRouter(
     navigatorKey: LocalStorageKeyStrings.appNavKey,
@@ -334,6 +349,13 @@ class AppRouter {
           pageBuilder: (BuildContext context, GoRouterState state) {
             Get.lazyPut<DantdhawanController>(() => DantdhawanController());
             return hcCustomTransitionPage(const DantdhawanHomeScreen());
+          }),
+
+      /// method
+      GoRoute(
+          path: method,
+          pageBuilder: (BuildContext context, GoRouterState state) {
+            return hcCustomTransitionPage(const MethodHome());
           }),
 
       ///  Whattoeat
@@ -522,6 +544,41 @@ class AppRouter {
           path: benefitsBathSnana,
           pageBuilder: (BuildContext context, GoRouterState state) {
             return hcCustomTransitionPage(const BenefitsBathSnanaScreen());
+          }),
+
+      /// jivha benefits
+      GoRoute(
+          path: jivhaBenefits,
+          pageBuilder: (BuildContext context, GoRouterState state) {
+            return hcCustomTransitionPage(const BenefitsScreen());
+          }),
+
+      /// jivha materials
+      GoRoute(
+          path: jivhaMaterials,
+          pageBuilder: (BuildContext context, GoRouterState state) {
+            return hcCustomTransitionPage(const MaterialsScreen());
+          }),
+
+      /// gandusha
+      GoRoute(
+          path: gandusha,
+          pageBuilder: (BuildContext context, GoRouterState state) {
+            return hcCustomTransitionPage(const GandushaScreen());
+          }),
+
+      /// gandusha benefits
+      GoRoute(
+          path: gandushaBenefits,
+          pageBuilder: (BuildContext context, GoRouterState state) {
+            return hcCustomTransitionPage(const GandushaBenefitsScreen());
+          }),
+
+      /// gandusha liquids
+      GoRoute(
+          path: gandushaLiquids,
+          pageBuilder: (BuildContext context, GoRouterState state) {
+            return hcCustomTransitionPage(const GandushaLiquidsScreen());
           }),
     ],
   );
