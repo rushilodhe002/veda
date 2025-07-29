@@ -72,9 +72,9 @@ class DincharyaScreen extends StatelessWidget {
                 children: [
                   InkWell(
                       onTap: (){
-                  // Navigator.push(context, MaterialPageRoute(builder: (context)=>()));
-                 },
-                    child: CustomContainer(
+                        context.push(AppRouter.abhyanga);
+                      },
+                      child: CustomContainer(
                         child: SvgPicture.asset(AppImages.oilmassageIcon),
                         title: AppStrings.abhayangatext,
                         subtitle: AppStrings.oilmassagetext),
