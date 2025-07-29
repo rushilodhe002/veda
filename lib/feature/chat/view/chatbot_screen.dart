@@ -1,6 +1,7 @@
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
 import 'package:google_generative_ai/google_generative_ai.dart';
+import 'package:donation_management/utils/constants/app_colors.dart';
 
 class ChatBotScreen extends StatefulWidget {
   const ChatBotScreen({super.key});
@@ -40,7 +41,7 @@ Make your responses feel natural and culturally appropriate for the detected lan
       child: Scaffold(
         appBar: AppBar(
           elevation: 0,
-          backgroundColor: Theme.of(context).primaryColor.withOpacity(0.1),
+          backgroundColor: AppColors.bgColor,
           title: Row(
             children: [
               CircleAvatar(
@@ -238,6 +239,7 @@ Make your responses feel natural and culturally appropriate for the detected lan
             ],
           ),
         ),
+        backgroundColor: AppColors.bgColor,
       ),
     );
   }

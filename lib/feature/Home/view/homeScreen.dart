@@ -14,7 +14,7 @@ class Homescreen extends StatelessWidget {
     return  SafeArea(
       child:  Scaffold(
         bottomNavigationBar: BottomNavBarWidget(),
-        backgroundColor: AppColors.customBackgroundColor,
+        backgroundColor: AppColors.bgColor,
         body: const Column(
           children: [
             Appnavbar(),

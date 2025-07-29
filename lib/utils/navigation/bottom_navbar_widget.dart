@@ -68,7 +68,9 @@ class BottomNavBarWidget extends StatelessWidget {
               ],
             ),
             child: FloatingActionButton(
-              onPressed: () {},
+              onPressed: () {
+                context.push(AppRouter.personalizedDincharya);
+              },
               shape: const CircleBorder(),
               backgroundColor: AppColors.greenColor,
               elevation: 0,

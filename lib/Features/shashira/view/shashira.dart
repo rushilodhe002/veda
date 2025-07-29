@@ -7,12 +7,14 @@ class Shashira extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: AppColors.screenbg,
-      body: Column(
-        children: [
-          const ShashiraContainer() // Fixed class name to PascalCase
-        ],
+    return SafeArea(
+      child: Scaffold(
+        backgroundColor: AppColors.bgColor,
+        body: Column(
+          children: [
+            const ShashiraContainer() // Fixed class name to PascalCase
+          ],
+        ),
       ),
     );
   }

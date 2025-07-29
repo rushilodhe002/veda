@@ -8,12 +8,14 @@ class Hemnta extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      backgroundColor:AppColors.screenbg,
-      body: Column(
-        children: [
-          Expanded(child: Hemantacontainer())
-        ],
+    return SafeArea(
+      child: Scaffold(
+        backgroundColor: AppColors.bgColor,
+        body: Column(
+          children: [
+            Expanded(child: Hemantacontainer()),
+          ],
+        ),
       ),
     );
   }

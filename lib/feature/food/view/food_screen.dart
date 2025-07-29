@@ -23,7 +23,7 @@ class _FoodScreenState extends State<FoodScreen> {
     return SafeArea(
       child: Scaffold(
         bottomNavigationBar: BottomNavBarWidget(),
-        backgroundColor: AppColors.customBackgroundColor,
+        backgroundColor: AppColors.bgColor,
         body: Padding(
           padding: const EdgeInsets.all(20),
           child: Column(

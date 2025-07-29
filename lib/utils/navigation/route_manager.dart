@@ -77,6 +77,8 @@ import '../../feature/pratimarsha_nasya/view/pratimarsha_rules_screen.dart';
 import '../../feature/anjana/view/anjana_screen.dart';
 import '../../feature/anjana/view/anjana_method_screen.dart';
 import '../../feature/anjana/view/anjana_rules_screen.dart';
+import '../../feature/Dincharya/view/personalized_dincharya_screen.dart';
+import '../../feature/Dincharya/view/dincharya_screen.dart';
 
 class AppRouter {
   static const String defaultLocation = "/";
@@ -245,6 +247,9 @@ class AppRouter {
   static const String anjanaMethod = '/anjana_method';
   static const String anjanaRules = '/anjana_rules';
 
+  /// personalizedDincharya
+  static const String personalizedDincharya = '/personalized-dincharya';
+
   // Define routes
   static final GoRouter router = GoRouter(
     navigatorKey: LocalStorageKeyStrings.appNavKey,
@@ -357,7 +362,6 @@ class AppRouter {
       GoRoute(
           path: dincharya,
           pageBuilder: (BuildContext context, GoRouterState state) {
-            Get.lazyPut<DincharyaController>(() => DincharyaController());
             return hcCustomTransitionPage(const DincharyaScreen());
           }),
 
@@ -639,6 +643,11 @@ class AppRouter {
           path: anjanaRules,
           pageBuilder: (BuildContext context, GoRouterState state) {
             return hcCustomTransitionPage(const AnjanaRulesScreen());
+          }),
+      GoRoute(
+          path: personalizedDincharya,
+          pageBuilder: (BuildContext context, GoRouterState state) {
+            return hcCustomTransitionPage(const PersonalizedDincharyaScreen());
           }),
     ],
   );

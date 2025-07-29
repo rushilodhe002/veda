@@ -14,7 +14,7 @@ class HealthtipsScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppColors.customBackgroundColor,
+      backgroundColor: AppColors.bgColor,
       body: Column(
         children: [
           const Rowwidget(),

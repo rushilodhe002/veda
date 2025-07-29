@@ -14,7 +14,7 @@ class PratimarshaScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xFFDFFFD4),
+      backgroundColor: AppColors.bgColor,
       body: Column(
         children: [
           // Header with dark green background

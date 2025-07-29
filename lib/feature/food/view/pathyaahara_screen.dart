@@ -9,15 +9,14 @@ class PathyaaharaScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  SafeArea(
+    return SafeArea(
       child: Scaffold(
-         bottomNavigationBar: BottomNavBarWidget(),
-         backgroundColor: AppColors.foodBgColor,
-        body:const Center(
+        bottomNavigationBar: BottomNavBarWidget(),
+        backgroundColor: AppColors.foodBgColor,
+        body: const Center(
           child: PathyaAharaWidget(),
         ),
       ),
     );
-    
   }
 }

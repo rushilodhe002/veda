@@ -11,7 +11,7 @@ class Whattoeatscreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppColors.customBackgroundColor,
+      backgroundColor: AppColors.bgColor,
       body: SingleChildScrollView(
         scrollDirection: Axis.vertical,
         child: Padding(
