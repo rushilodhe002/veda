@@ -70,6 +70,7 @@ import '../../feature/jivha_nirlekhana/view/materials_screen.dart';
 import '../../feature/gandusha/view/gandusha_screen.dart';
 import '../../feature/gandusha/view/benefits_screen.dart';
 import '../../feature/gandusha/view/liquids_screen.dart';
+import '../../feature/pratimarsha_nasya/view/pratimarsha_screen.dart';
 
 class AppRouter {
   static const String defaultLocation = "/";
@@ -226,6 +227,9 @@ class AppRouter {
   static const String gandusha = "/gandusha";
   static const String gandushaBenefits = "/gandusha_benefits";
   static const String gandushaLiquids = "/gandusha_liquids";
+
+  /// pratimarsha nasya
+  static const String pratimarsha = "/pratimarsha";
 
   // Define routes
   static final GoRouter router = GoRouter(
@@ -579,6 +583,13 @@ class AppRouter {
           path: gandushaLiquids,
           pageBuilder: (BuildContext context, GoRouterState state) {
             return hcCustomTransitionPage(const GandushaLiquidsScreen());
+          }),
+
+      /// pratimarsha nasya
+      GoRoute(
+          path: pratimarsha,
+          pageBuilder: (BuildContext context, GoRouterState state) {
+            return hcCustomTransitionPage(const PratimarshaScreen());
           }),
     ],
   );

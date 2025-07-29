@@ -131,7 +131,7 @@ class DincharyaScreen extends StatelessWidget {
                   25.width,
                   InkWell(
                          onTap: (){
-                  // Navigator.push(context, MaterialPageRoute(builder: (context)=>()));
+                  context.push(AppRouter.pratimarsha);
                  },
                     child: CustomContainer(
                       child: SvgPicture.asset(AppImages.bloodIcon),
