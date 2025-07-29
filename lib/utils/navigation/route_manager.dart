@@ -64,6 +64,7 @@ import '../../feature/Udavartanascreen/view/benefits_udavartana_screen.dart';
 import '../../feature/Udavartanascreen/view/guidelines_udavartana_screen.dart';
 import '../../feature/BathSnana/view/bath_snana_screen.dart';
 import '../../feature/BathSnana/view/benefits_bath_snana_screen.dart';
+import '../../feature/BathSnana/view/guidelines_bath_snana_screen.dart';
 import '../../feature/method_of _application/view/method_home.dart';
 import '../../feature/jivha_nirlekhana/view/benefits_screen.dart';
 import '../../feature/jivha_nirlekhana/view/materials_screen.dart';
@@ -71,6 +72,11 @@ import '../../feature/gandusha/view/gandusha_screen.dart';
 import '../../feature/gandusha/view/benefits_screen.dart';
 import '../../feature/gandusha/view/liquids_screen.dart';
 import '../../feature/pratimarsha_nasya/view/pratimarsha_screen.dart';
+import '../../feature/pratimarsha_nasya/view/pratimarsha_method_screen.dart';
+import '../../feature/pratimarsha_nasya/view/pratimarsha_rules_screen.dart';
+import '../../feature/anjana/view/anjana_screen.dart';
+import '../../feature/anjana/view/anjana_method_screen.dart';
+import '../../feature/anjana/view/anjana_rules_screen.dart';
 
 class AppRouter {
   static const String defaultLocation = "/";
@@ -219,6 +225,8 @@ class AppRouter {
 
   static const String benefitsBathSnana = "/benefits_bath_snana";
 
+  static const String guidelinesBathSnana = '/guidelines_bath_snana';
+
   /// jivha nirlekhana
   static const String jivhaBenefits = "/jivha_benefits";
   static const String jivhaMaterials = "/jivha_materials";
@@ -230,6 +238,12 @@ class AppRouter {
 
   /// pratimarsha nasya
   static const String pratimarsha = "/pratimarsha";
+  static const String pratimarshaMethod = "/pratimarsha_method";
+  static const String pratimarshaRules = "/pratimarsha_rules";
+
+  static const String anjana = '/anjana';
+  static const String anjanaMethod = '/anjana_method';
+  static const String anjanaRules = '/anjana_rules';
 
   // Define routes
   static final GoRouter router = GoRouter(
@@ -549,6 +563,11 @@ class AppRouter {
           pageBuilder: (BuildContext context, GoRouterState state) {
             return hcCustomTransitionPage(const BenefitsBathSnanaScreen());
           }),
+      GoRoute(
+          path: guidelinesBathSnana,
+          pageBuilder: (BuildContext context, GoRouterState state) {
+            return hcCustomTransitionPage(const GuidelinesBathSnanaScreen());
+          }),
 
       /// jivha benefits
       GoRoute(
@@ -590,6 +609,36 @@ class AppRouter {
           path: pratimarsha,
           pageBuilder: (BuildContext context, GoRouterState state) {
             return hcCustomTransitionPage(const PratimarshaScreen());
+          }),
+      
+      /// pratimarsha method
+      GoRoute(
+          path: pratimarshaMethod,
+          pageBuilder: (BuildContext context, GoRouterState state) {
+            return hcCustomTransitionPage(const PratimarshaMethodScreen());
+          }),
+      
+      /// pratimarsha rules
+      GoRoute(
+          path: pratimarshaRules,
+          pageBuilder: (BuildContext context, GoRouterState state) {
+            return hcCustomTransitionPage(const PratimarshaRulesScreen());
+          }),
+
+      GoRoute(
+          path: anjana,
+          pageBuilder: (BuildContext context, GoRouterState state) {
+            return hcCustomTransitionPage(const AnjanaScreen());
+          }),
+      GoRoute(
+          path: anjanaMethod,
+          pageBuilder: (BuildContext context, GoRouterState state) {
+            return hcCustomTransitionPage(const AnjanaMethodScreen());
+          }),
+      GoRoute(
+          path: anjanaRules,
+          pageBuilder: (BuildContext context, GoRouterState state) {
+            return hcCustomTransitionPage(const AnjanaRulesScreen());
           }),
     ],
   );

@@ -120,7 +120,7 @@ class DincharyaScreen extends StatelessWidget {
               Row(
                 children: [
                   InkWell(     onTap: (){
-                  // Navigator.push(context, MaterialPageRoute(builder: (context)=>()));
+                  context.push('/anjana');
                  },
 
                     child: CustomContainer(

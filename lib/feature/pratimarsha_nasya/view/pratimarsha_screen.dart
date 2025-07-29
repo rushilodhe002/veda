@@ -6,6 +6,7 @@ import 'package:go_router/go_router.dart';
 
 import '../../../utils/constants/app_images.dart';
 import '../../../utils/themes/app_text_style.dart';
+import '../../../utils/navigation/route_manager.dart';
 
 class PratimarshaScreen extends StatelessWidget {
   const PratimarshaScreen({super.key});
@@ -80,7 +81,7 @@ class PratimarshaScreen extends StatelessWidget {
                   InkWell(
                     onTap: () {
                       // Navigate to method screen
-                      // context.push(AppRouter.pratimarshaMethod);
+                      context.push(AppRouter.pratimarshaMethod);
                     },
                     child: Container(
                       padding: EdgeInsets.all(12),
@@ -92,7 +93,7 @@ class PratimarshaScreen extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Text(
-                            "Pratimarsha Nasya - Method of Application:",
+                            "Pratimarsha Nasya - Method \n of Application:",
                             style: const TextStyle(fontSize: 16, color: AppColors.white, fontWeight: FontWeight.bold),
                           ),
                           const Icon(Icons.arrow_forward_ios, color: AppColors.white, size: 16),
@@ -105,7 +106,7 @@ class PratimarshaScreen extends StatelessWidget {
                   InkWell(
                     onTap: () {
                       // Navigate to rules screen
-                      // context.push(AppRouter.pratimarshaRules);
+                      context.push(AppRouter.pratimarshaRules);
                     },
                     child: Container(
                       padding: EdgeInsets.all(12),

@@ -103,7 +103,9 @@ class BathSnanaWidget extends StatelessWidget {
                     ),
                     padding: const EdgeInsets.symmetric(vertical: 12),
                   ),
-                  onPressed: () {},
+                  onPressed: () {
+                    context.push(AppRouter.guidelinesBathSnana);
+                  },
                   child: const Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
